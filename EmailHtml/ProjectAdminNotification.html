@@ -1,0 +1,41 @@
+<html> 
+    <body> 
+        <div>
+            <p>
+                Hi,<br/><br/>
+
+                You are receiving this mail because you are a project administrator for the [projectname] project in https://contoso.visualstudio.com. We are in the process of transitioning certain VSTS project responsibilities to administrators, beginning with a new service we are planning to launch on <b>Tuesday, March 27.</b> The service is called <b>RepoCop</b> and is designed to collect basic metadata on repositories and help keep them compliant (if necessary). <br/><br/> 
+
+                Currently, RepoCop sends emails to repos that are missing or contain an incomplete repo.json file (our new means of tracking repository metadata). Many repos already have this file present and completed, but there are still some stragglers. We will attempt to contact the repo owners/users first, but if they don't respond, we'll send an email to you, the project admins. <b><font color="#ff0000">If you, as a project admin, receive an email from RepoCop, the expectation is that you will work with the repo contributors on your team to make sure the issue is addressed or the repository is decommissioned.</font></b> If the issues are still not addressed after RepoCop sends the mail to the project admins, the repository will be locked and future pull requests will be blocked. <br/><br/>
+
+                Thank you for helping us ensure that https://contoso.visualstudio.com remains secure and compliant!<br/><br/>
+
+                <b>Some FAQs:</b><br/>
+                <b>Wait, I don't need to be an administrator for this project. How do I get removed?</b></br>
+                Please reply all to this mail, and we'll remove you as an admin.</br></br> 
+                
+                <b>The repository is owned by my team but is no longer needed. How do I decommission or delete it?</b></br>
+                Please reply all to this mail, and we'll remove the repository for you.</br></br>
+
+                <b>I'd like to just fill out the repo.json file for a repository my team owns. What do I need to do?</b></br>
+                You can either use the VSTS UI (go to the repository, navigate to metadata/repo.json, and click the 'edit' button in the upper right), or clone the repo locally, make the change, push it back to VSTS and submit a PR. In either case, RepoCop is currently validating that the file is present and well-formed in each repository, and that the contact(s), description, and deployedToProduction field are populated and valid. You may certainly fill out the other fields as well, but you're not required to. <br/><br/>
+
+                <b>Didn't something like this happen before?</b></br>
+                Yes, you may have filled out a "Repository Metadata" form for certain repos in your project. However, we transitioned to the repo.json standard to track metadata at the root of all repositories. This allows you to version the metadata of the repository alongside the code and is a Contoso-standardized means of tracking this metadata. For each repo with a completed Repository Metadata form, we've migrated that information to its repo.json file. The majority of repositories supplied the required metadata in that first push, and there's no action required at this time for those repos. <br/><br/>
+
+                <b>What happens when you "lock" a repo?</b></br>
+                We will add the RepoCop Admin SG as a required reviewer for PRs to the repo's main branch. If this occurs, project administrators and contact(s) (or the person who has made the most pushes to the repo if we don't have a contact) will receive an email with detailed instructions on steps to take to "unlock" the repo. <br/><br/>
+
+                <b>Why do we need this information?</b><br/>
+                To be change-management compliant, we need insight into how all of the git repositories hosted on https://contoso.visualstudio.com are used. We know that many of them host internal tools and personal projects that don't need to be compliant, but also that some do ship to external customers (either directly or indirectly through devmain/other builds). We need to identify owners for all of the code currently hosted in git and to classify the repositories as either shipping or internal. For code that is identified as shipping, we'll be following up separately to ensure that the repository and build are change-management compliant.<br/><br/>
+
+                <b>Have more questions?</b></br>
+                Please reply all to this mail.</br></br>     
+
+                Thanks!</br>
+                Lessley </br>
+                On behalf of Contoso Engineering 
+            </p>
+        </div>
+    </body> 
+</html> 
